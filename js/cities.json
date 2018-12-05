@@ -1,0 +1,9 @@
+cities = [{"city":"Scranton, Pennsylvania","info":"Where The Office takes place.","latitude":41.409,"longitude":-75.662},
+{"city":"Stamford, Connecticut","info":"Where Jim from The Office moves to in season 3.","latitude":41.053,"longitude":-73.539},
+{"city":"Phoenix, Arizona","info":"Where Eleanor Shellstrop from The Good Place is from.","latitude":33.449,"longitude":-112.077},
+{"city":"Jacksonville, Florida","info":"Where Jason Mendoza from The Good Place is from.","latitude":30.332,"longitude":-81.656},
+{"city":"Ann Arbor, Michigan","info":"Where Mike Schur was born and where Ann and Chris from Parks and Recreation move to in season 6.","latitude":42.268,"longitude":-83.731},
+{"city":"Brooklyn, New York","info":"Where Brooklyn 99 takes place.","latitude":40.65,"longitude":-73.95},
+{"city":"New York City, New York","info":"Where Master of None takes place.","latitude":40.765,"longitude":-73.981},
+{"city":"Washington D.C.","info":"Where Leslie Knope and her husband, Ben, move to at the end of the series.","latitude":38.895,"longitude":-77.037},
+{"city":"Lafayette, Indiana","info":"One of the probable locations of the fictional city Pawnee, Indiana in Parks and Recreation.","latitude":40.417,"longitude":-86.875}]

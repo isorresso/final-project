@@ -1,0 +1,228 @@
+html{
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+* {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+}
+
+header {
+    grid-area: header; /* keep */
+    background: #4FA557;
+    text-align:center;
+    font-size: 3em;
+    padding: 2rem;
+    color: #fff;
+}
+
+h1 {
+  font-family: 'Nunito', sans-serif;
+}
+
+article{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 20px 0px 40px;
+}
+
+#mike{
+  background: #DCDCDC;
+  color: #000;
+  flex: 1 1 auto;
+}
+
+h2 {
+  font-size: 3em;
+  text-align: center;
+  margin:auto;
+}
+
+#allbuttons {
+  text-align: center;
+  background: #A9A9A9;
+  padding-left: .5rem;
+}
+
+.buttons {
+  background: #000;
+  color: #fff;
+  text-align: center;
+  padding: 5rem;
+  margin: 0 1rem 0 1rem;
+  display: inline-block;
+  font-family: 'Nunito', sans-serif;
+  font-size: 3.2em;
+  cursor: pointer;
+}
+
+#firsttwo {
+  padding: 1rem;
+}
+
+#secondtwo {
+  padding: 1rem 1rem 0 1rem;
+}
+
+#factsbutton {
+  padding: 5rem 5.3rem 5rem 5.3rem;
+}
+
+#maparea {
+  background: #DCDCDC;
+  padding-top: 3rem;
+}
+
+#mapid {
+  height: 500px;
+  width: 65%;
+  margin: auto;
+  padding-top: 2rem;
+}
+
+#factsarea {
+background: #A9A9A9;
+}
+
+#container1, #container2, #container3, #container4, #container5, #container6, #container7, #container8, #container9 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-left: 4rem;
+}
+
+.pix, .facts, .actor{
+  background: #4FA557;
+  padding: 1rem;
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+  margin: 1rem;
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pix {
+  font-size: 1.3em;
+  cursor: pointer;
+}
+
+.actor {
+  margin-left: 1.5rem;
+}
+
+#quizarea {
+  background: #DCDCDC;
+}
+
+#actorsarea {
+  background: #A9A9A9;
+}
+
+p, h2, .mapinfo {
+  font-family: 'Poppins', sans-serif;
+  padding: 1rem;
+
+}
+
+.mapinfo, #about {
+  padding-left: 20rem;
+  padding-right: 20rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+#pagebutton {
+  background: #333;
+  font-size: 1.5em;
+  padding-left: 20rem;
+}
+
+footer {
+  background: #DCDCDC;
+  padding: 1rem;
+
+}
+
+/* pseudo links */
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #4FA557;
+}
+
+/* media queries from map project - cut down, only 2 or 3 needed*/
+
+@media screen and (max-width: 1050px) {
+  .mapinfo {
+    padding-left: 15rem;
+    padding-right: 15rem;
+  }
+
+  #mapid {
+    height: 400px;
+    width: 65%;
+    margin: auto;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .mapinfo {
+    padding-left: 10rem;
+    padding-right: 10rem;
+  }
+
+  #mapid {
+    width: 80%;
+    margin: auto;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .mapinfo {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+
+  #mapid {
+    height: 300px;
+    width: 90%;
+    margin: auto;
+  }
+}
+
+@media screen and (max-width: 570px) {
+  .mapinfo {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+
+  #mapid {
+    height: 300px;
+    width: 90%;
+    margin: auto;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .mapinfo {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  #mapid {
+    height: 250px;
+    width: 100%;
+    margin: auto;
+  }
+}
