@@ -1,6 +1,5 @@
 $(document).ready(function() {
 
-
 $('#schurfacts').hide();
   $('#schur').click(function() {
     $('#schurfacts').slideToggle();
@@ -30,4 +29,24 @@ $('#parksfacts').hide();
       $('#dev').click(function() {
         $('#masterfacts').slideToggle();
       });
+
 });
+
+/*
+$(document).ready(() => {
+
+  $(".facts").hide();
+
+    $(".pix").on("click", event => {
+        $(event.currentTarget)
+          .closest("section")
+          .siblings()
+          .find(".facts")
+          .slideUp();
+
+          $(event.currentTarget)
+                .parent()
+                .next()
+                .slideToggle();
+      });
+*/

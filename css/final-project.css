@@ -73,8 +73,11 @@ h2 {
   padding: 5rem 5.3rem 5rem 5.3rem;
 }
 
-#maparea {
+#quizarea, #maparea {
   background: #DCDCDC;
+}
+
+#maparea {
   padding-top: 3rem;
 }
 
@@ -85,7 +88,7 @@ h2 {
   padding-top: 2rem;
 }
 
-#factsarea {
+#factsarea, #actorsarea {
 background: #A9A9A9;
 }
 
@@ -93,7 +96,7 @@ background: #A9A9A9;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin-left: 4rem;
+  margin-left: 3rem;
 }
 
 .pix, .facts, .actor{
@@ -114,24 +117,22 @@ background: #A9A9A9;
 }
 
 .actor {
-  margin-left: 1.5rem;
+  font-size: 0.9em;
+  cursor: pointer;
 }
 
-#quizarea {
-  background: #DCDCDC;
-}
 
-#actorsarea {
-  background: #A9A9A9;
-}
 
-p, h2, .mapinfo {
+
+
+
+p, h2, .about {
   font-family: 'Poppins', sans-serif;
   padding: 0.5rem;
 
 }
 
-.mapinfo, #about, #pagebutton {
+.about {
   padding-left: 20rem;
   padding-right: 20rem;
   padding-top: 1rem;
@@ -146,7 +147,10 @@ p, h2, .mapinfo {
 footer {
   background: #DCDCDC;
   padding: 1rem;
+}
 
+#repo {
+  color: #4FA557;
 }
 
 /* pseudo links */
@@ -160,7 +164,7 @@ a:hover {
     color: #4FA557;
 }
 
-/* media queries from map project - cut down, only 2 or 3 needed*/
+/* media queries from map project - need to cut down, only 2 or 3 needed*/
 
 @media screen and (max-width: 1050px) {
   .mapinfo {
