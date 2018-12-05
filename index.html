@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Final Project</title>
+    <script src="js/cities.json"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
+integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA==" crossorigin="">
+  <link href="css/final-project.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Poppins|Nunito" rel="stylesheet">
+
+</head>
+
+<body>
+<header id="topofpage">
+  <h1>Welcome!<br>Everything is fine.</h1>
+</header>
+
+
+
+<article id="mike">
+<section>
+<h2>Mike Schur and Your<br>Favorite Comedies</h2>
+<p id="about">Michael Schur is one of the producers responsible for some of your favorite network comedies. Explore the page to learn more about these popular TV shows and one of the men behind them.</p>
+</section>
+</article>
+
+<!--buttons-->
+
+<article id="allbuttons">
+
+<section id="firsttwo">
+<div id="mapbutton" class='buttons'><a href="#maparea">Explore The Schuriverse</a></div>
+<div id="factsbutton" class='buttons'><a href="#factsarea">Fun Facts</a></div>
+</section> <!-- end of first two buttons -->
+
+<section id="secondtwo">
+<div id="quiz" class='buttons'><a href="#quizarea">Take a Quiz!</a></div>
+<div id="actors" class='buttons'><a href="#actorsarea">Mike's Favorite Actors</a></div>
+</section>
+</article>
+
+<!--html for map-->
+<article id="maparea">
+  <h2>Explore the "Schur-iverse"</h2>
+<div id="mapid"></div>
+<p class='mapinfo'>This map displays locations from different shows that Michael Schur has contributed to over the years. Shows mentioned include The Office, Parks and Recreation, The Good Place, Brooklyn 99 and Master of None.</p>
+<p class='mapinfo'>Click around the locations to see which shows take place near you!</p>
+</article>
+
+<script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js" integrity="sha512-nMMmRyTVoLYqjP9hrbed9S+FzjZHW5gY1TWCHA5ckwXZBadntCNs8kEqAWdrb9O7rxbCaA4lKTIWjDXZxflOcA==" crossorigin=""></script>
+
+<!-- fun facts -->
+<article id="factsarea">
+<section>
+  <h2>Fun Facts</h2>
+
+<div id="container1"> <!--container 1-->
+
+<div id="schur" class='pix'>
+  <img src='images/mikeschur.jpg' style="width:300px; height:300px;" alt="A photo of Michael Schur, executive producer of many network comedy shows.">
+  <h3>Mike Schur</h3>
+</div>
+
+
+<div id="leslie" class='pix'>
+  <img src='images/leslie.png' style="width:300px; height:300px;" alt="A photo of Amy Poehler, who plays the role of Leslie Knope on Parks and Recreation.">
+  <h3>Parks and Recreation</h3>
+</div>
+
+
+
+<div id="michael" class='pix'>
+  <img src='images/michael.png' style="width:300px; height:300px;" alt="A photo of Steve Carell, who plays Michael Scott on The Office.">
+  <h3>The Office</h3>
+</div>
+</div> <!-- end of container 1-->
+
+<div id="container2"> <!--container 2-->
+    <div id="schurfacts" class='facts'><b>Mike Schur</b>
+      <ul>
+          <li>Mike Schur was born in Ann Arbor, Michigan, the city where Ann Perkins and Chris Traeger move to in season 6 of Parks and Rec.</li>
+      </ul>
+      </div>
+    <div id="parksfacts" class='facts'><b>Parks and Recreation</b>
+      <ul>
+          <li>Parks and Recreation began as a spin-off of The Office, but was reworked to create the Parks and Rec we know now.</li>
+      </ul>
+      </div>
+    <div id="officefacts" class='facts'><b>The Office</b>
+      <ul>
+        <li>Phyllis Smith was a casting director and they ended up creating the role of Phyllis Vance specially for her.</li>
+      </ul>
+      </div>
+</div> <!-- end of container 2-->
+
+<div id="container3"> <!--container 3-->
+
+<div id="jake" class='pix'>
+  <img src='images/jakeperalta.png' style="width:300px; height:300px;" alt="A photo of Andy Samberg, who plays Jake Peralta on Brooklyn 99.">
+  <h3>Brooklyn 99</h3>
+</div>
+
+<div id="eleanor" class='pix'>
+  <img src='images/eleanor.png' style="width:300px; height:300px;" alt="A photo of Kristen Bell, who plays Eleanor Shellstrop on The Good Place.">
+  <h3>The Good Place</h3>
+</div>
+
+<div id="dev" class='pix'>
+  <img src='images/dev.png' style="width:300px; height:300px;" alt="A photo of Aziz Ansari, who plays Dev on Master of None.">
+  <h3>Master of None</h3>
+</div>
+
+</div> <!-- end of container 3-->
+
+<div id="container4"> <!--container 4-->
+  <div id="brooklynfacts" class='facts'>these are b99 fun facts</div>
+  <div id="goodplacefacts" class='facts'>these are good place fun facts</div>
+  <div id="masterfacts" class='facts'>these are master of none fun facts</div>
+
+</div> <!-- end of container 4-->
+
+</section>
+</article>
+
+<!--quiz-->
+<article id="quizarea">
+<section>
+  <h2>Which Mike Schur Show Do You Belong In?</h2>
+  <p>here is a quiz</p>
+</section>
+</article>
+
+<!--fave actors-->
+<article id="actorsarea">
+<section>
+  <h2>Mike's Favorite Actors</h2>
+
+  <div id="container5"> <!--container 5-->
+
+  <div id="kristen" class='actor'>
+    <img src='images/kristen-bell.jpg' style="width:200px; height:200px;" alt="A photo of actor Kristen Bell.">
+    <h3>Kristen Bell</h3>
+  </div>
+
+  <div id="rashida" class='actor'>
+    <img src='images/rashida-jones.jpg' style="width:200px; height:200px;" alt="A photo of actor Rashida Jones.">
+    <h3>Rashida Jones</h3>
+    </div>
+
+  <div id="marc" class='actor'>
+    <img src='images/marc-evan-jackson.jpg' style="width:200px; height:200px;" alt="A photo of actor Marc Evan Jackson.">
+    <h3>Marc Evan Jackson</h3>
+  </div>
+
+  <div id="andy" class='actor'>
+    <img src='images/andy-samberg.jpg' style="width:200px; height:200px;" alt="A photo of actor Andy Samberg.">
+    <h3>Andy Samberg</h3>
+  </div>
+
+</div> <!-- end of container 5 -->
+
+<div id="container6"> <!--container 6-->
+</div> <!-- end of container 6-->
+
+<div id="container7"> <!--container 7-->
+
+  <div id="adam" class='actor'>
+    <img src='images/adam-scott.jpg' style="width:200px; height:200px;" alt="A photo of actor Adam Scott.">
+    <h3>Adam Scott</h3>
+  </div>
+
+  <div id="nick" class='actor'>
+    <img src='images/nick-offerman.jpg' style="width:200px; height:200px;" alt="A photo of actor Nick Offerman.">
+    <h3>Nick Offerman</h3>
+  </div>
+
+  <div id="jason" class='actor'>
+    <img src='images/jason-mantzoukas.jpg' style="width:200px; height:200px;" alt="A photo of actor Jason Mantzoukas.">
+    <h3>Jason Mantzoukas</h3>
+  </div>
+
+  <div id="aziz" class='actor'>
+    <img src='images/aziz-ansari.jpg' style="width:200px; height:200px;" alt="A photo of actor Aziz Ansari.">
+    <h3>Aziz Ansari</h3>
+  </div>
+
+</div> <!-- end of container 7-->
+
+<div id="container8"> <!--container 8-->
+</div> <!--end of container 8-->
+
+<div id="container9"> <!--container 9-->
+
+  <div id="craig" class='actor'>
+    <img src='images/craig-robinson.jpg' style="width:200px; height:200px;" alt="A photo of actor Craig Robinson.">
+    <h3>Craig Robinson</h3>
+  </div>
+
+  <div id="jim" class='actor'>
+    <img src='images/jim-oheir.jpg' style="width:200px; height:200px;" alt="A photo of actor Jim O'Heir.">
+    <h3>Jim O'Heir</h3>
+  </div>
+
+  <div id="chelsea" class='actor'>
+    <img src='images/chelsea-peretti.jpg' style="width:200px; height:200px;" alt="A photo of actor Chelsea Peretti.">
+    <h3>Chelsea Peretti</h3>
+  </div>
+
+  <div id="kathryn" class='actor'>
+    <img src='images/kathryn-hahn.jpg' style="width:200px; height:200px;" alt="A photo of actor Kathryn Hahn.">
+    <h3>Kathryn Hahn</h3>
+  </div>
+
+</div> <!-- end of container 9-->
+
+</section>
+</article>
+
+<!--javascript for mapid-->
+<script>
+var mymap = L.map('mapid').setView([38.675, -93.582], 4);
+
+L.tileLayer('https://api.mapbox.com/styles/v1/isorresso/cjp1fm8730nls2rn1krkzm4cf/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoiaXNvcnJlc3NvIiwiYSI6ImNqcDFlcjh2MTA3N3kza283cXNydGlveGIifQ.C8m5YVavqrsDVZN_hqClvg', {
+    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+    maxZoom: 18
+}).addTo(mymap);
+
+for (let i = 0; i < cities.length; i++) {
+  L.marker( [ cities[i].latitude, cities[i].longitude ] )
+  .bindPopup( '<h3>' + cities[i].city + '</h3>' + '<p>' + cities[i].info + '</p>')
+  .addTo( mymap);
+}
+
+</script>
+
+<article id="pagebutton">
+  <p><a href="#topofpage">Click here to go back to the top of the page</a></p>
+</article>
+
+<footer>
+  <p>This page was created by Isabella Sorresso for Introduction to Web Apps at the University of Florida. Click here to see my GitHub repo for this page.</p>
+</footer>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/final-project.js"></script>
+
+</body>
+</html>
