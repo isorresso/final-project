@@ -107,7 +107,7 @@ background: #A9A9A9;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin-left: 3rem;
+  
 }
 
 .pix, .facts, .actor{
