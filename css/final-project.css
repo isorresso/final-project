@@ -1,3 +1,14 @@
+.card-deck {
+  @include media-breakpoint-only(lg) {
+    column-count: 4;
+  }
+}
+
+.card-deck {
+    display: flex;
+    margin: 2rem;
+}
+
 html{
   font-size: 100%;
   box-sizing: border-box;
@@ -15,13 +26,13 @@ header {
     grid-area: header; /* keep */
     background: #4FA557;
     text-align:center;
-    font-size: 3em;
-    padding: 2rem;
+    padding: 5rem;
     color: #fff;
 }
 
 h1 {
   font-family: 'Nunito', sans-serif;
+  font-size: 7em;
 }
 
 article{
@@ -129,7 +140,6 @@ background: #A9A9A9;
 p, h2, .about {
   font-family: 'Poppins', sans-serif;
   padding: 0.5rem;
-
 }
 
 .about {
