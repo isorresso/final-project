@@ -107,7 +107,10 @@ background: #A9A9A9;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  
+}
+
+#container10 {
+  padding-left: 5rem;
 }
 
 .pix, .facts, .actor{
@@ -166,7 +169,7 @@ footer {
 /* pseudo links */
 
 a {
-    color: #fff;
+    color: #4FA557;
     text-decoration: none;
 }
 
