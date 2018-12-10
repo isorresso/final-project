@@ -1,10 +1,4 @@
 .card-deck {
-  @include media-breakpoint-only(lg) {
-    column-count: 4;
-  }
-}
-
-.card-deck {
     display: flex;
     margin: 2rem;
 }
@@ -36,9 +30,6 @@ h1 {
 }
 
 article{
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
   padding: 20px 0px 40px;
 }
 
@@ -54,34 +45,26 @@ h2 {
   margin:auto;
 }
 
-#allbuttons {
-  text-align: center;
-  background: #A9A9A9;
-  padding-left: .5rem;
+#buttonsarea {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .buttons {
   background: #000;
   color: #fff;
   text-align: center;
-  padding: 5rem;
-  margin: 0 1rem 0 1rem;
-  display: inline-block;
+  padding: 2rem;
   font-family: 'Nunito', sans-serif;
-  font-size: 3.2em;
+  font-size: 2em;
   cursor: pointer;
+  flex: 1 1 0;
+  margin: .75rem;
 }
 
-#firsttwo {
-  padding: 1rem;
-}
-
-#secondtwo {
-  padding: 1rem 1rem 0 1rem;
-}
-
-#factsbutton {
-  padding: 5rem 5.3rem 5rem 5.3rem;
+#allbuttons {
+  background: #A9A9A9;
 }
 
 #quizarea, #maparea, #sources {
@@ -103,42 +86,9 @@ h2 {
 background: #A9A9A9;
 }
 
-#container1, #container2, #container3, #container4, #container5, #container6, #container7, #container8, #container9 {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
 #container10 {
   padding-left: 5rem;
 }
-
-.pix, .facts, .actor{
-  background: #4FA557;
-  padding: 1rem;
-  font-family: 'Poppins', sans-serif;
-  color: #fff;
-  margin: 1rem;
-  flex: 1 1 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.pix {
-  font-size: 1.3em;
-  cursor: pointer;
-}
-
-.actor {
-  font-size: 0.9em;
-  cursor: pointer;
-}
-
-
-
-
-
 
 p, h2, .about {
   font-family: 'Poppins', sans-serif;
@@ -177,6 +127,93 @@ a:hover {
     color: #4FA557;
 }
 
+/*quiz css*/
+/*
+.quiz {
+  padding:0 30px 20px 30px;
+  max-width:960px;
+  margin:0 auto;
+}
+  ul {
+    list-style:none;
+    padding:0;
+    margin:0;
+  }
+
+.quiz-question {
+  font-weight:bold;
+  display:block;
+  padding:30px 0 10px 0;
+  margin:0;
+}
+.quiz-answer {
+  margin:0;
+  padding:10px;
+  background:#f7f7f7;
+  margin-bottom:5px;
+  cursor: pointer;
+}
+  &:hover {
+    background:#eee;
+  }
+
+  &:before {
+    content:"";
+    display:inline-block;
+    width:15px;
+    height:15px;
+    border:1px solid #ccc;
+    background:#fff;
+    vertical-align:middle;
+    margin-right:10px;
+  }
+
+  &.active {
+    &:before {
+      background-color:#333;
+      border-color:#333;
+    }
+  }
+
+  &.correct {
+    &:before {
+      background-color:green;
+      border-color:green;
+    }
+  }
+  &.incorrect {
+    &:before {
+      background-color:red;
+      border-color:red;
+    }
+  }
+  &.active.correct {
+    &:before {
+      outline: 2px solid green;
+      outline-offset: 2px;
+    }
+  }
+}
+.quiz-result {
+  max-width:960px;
+  margin:0 auto;
+  font-weight:bold;
+  text-align:center;
+  color: #fff;
+  padding:20px;
+
+  &.good {
+    background: green;
+  }
+  &.mid {
+    background: orange;
+  }
+  &.bad {
+    background: red;
+  }
+}
+
+*/
 /* media queries from map project - need to cut down, only 2 or 3 needed*/
 
 @media screen and (max-width: 1050px) {
