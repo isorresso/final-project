@@ -1,103 +1,105 @@
+const height = 3000;
+let points = 0;
+let health = 100;
+let money = 50;
+let minus = 0;
+let distance = height;
 
-$('#quiz').quiz({
-  //resultsScreen: '#results-screen',
-  //counter: false,
-  //homeButton: '#custom-home',
-  counterFormat: 'Question %current of %total',
-  questions: [
-    {
-      'q': 'Is jQuery required for this plugin?',
-      'options': [
-        'Yes',
-        'No'
-      ],
-      'correctIndex': 0,
-      'correctResponse': 'Good job, that was obvious.',
-      'incorrectResponse': 'Well, if you don\'t include it, your quiz won\'t work'
-    },
-    {
-      'q': 'How do you use it?',
-      'options': [
-        'Include jQuery, that\'s it!',
-        'Include jQuery and the plugin javascript.',
-        'Include jQuery, the plugin javascript, the optional plugin css, required markup, and the javascript configuration.'
-      ],
-      'correctIndex': 2,
-      'correctResponse': 'Correct! Sounds more complicated than it really is.',
-      'incorrectResponse': 'Come on, it\'s not that easy!'
-    },
-    {
-      'q': 'The plugin can be configured to require a perfect score.',
-      'options': [
-        'True',
-        'False'
-      ],
-      'correctIndex': 0,
-      'correctResponse': 'You\'re a genius! You just set allowIncorrect to true.',
-      'incorrectResponse': 'Why you have no faith!? Just set allowIncorrect to true.'
-    },
-    {
-      'q': 'How do you specify the questions and answers?',
-      'options': [
-        'MySQL database',
-        'In the HTML',
-        'In the javascript configuration'
-      ],
-      'correctIndex': 2,
-      'correctResponse': 'Correct! Refer to the documentation for the structure.',
-      'incorrectResponse': 'Wrong! Do it in the javascript configuration. You might need to read the documentation.'
-    }
-  ]
-});
+// messages
+let m1 = "You're stuck on earth and know that you need " + height + " points to get into The Good Place. Your goal is to get there as fast as you can. Just don't do anything annoying and try to stay healthy along the way. -Michael (Architect of Neighborhood 12358W)";
+let m3 = "Oh, no! Looks like you took your socks and shoes off in a public place. Minus 100 points!";
+let m4 = "Oh, snap! You died on your way to The Good Place. Unfortunately, that's never happened before. We're sticking you in the Medium Place until we decide what to do.";
+let m5 = "Congratulations! You've reached The Good Place! Doug Forcett would be proud.";
+let m6 = "You must select an option before you click Go.";
+let m7 = "Nice! Janet, give them 100 points!";
+let m8 = "That was nice! You're getting there!";
+let m9 = "You're out of money!";
+let m10 = "Wow, humans really think they need self care even when their health is at 100 percent. No points!"
+let m11 = "There's no time to waste! Keep going!"
 
 
+let message = m1;
 
+writeResults();
 
+const goButton = document.querySelector('#go');
 
-/*function submitAnswers(){
-  var total = 5;
-  var score = 0;
+goButton.addEventListener('click', playerResult);
 
-  var q1 = document.forms["quizForm"]["q1"].value;
-  var q2 = document.forms["quizForm"]["q2"].value;
-  var q3 = document.forms["quizForm"]["q3"].value;
-  var q4 = document.forms["quizForm"]["q4"].value;
-  var q5 = document.forms["quizForm"]["q5"].value;
-
-  if(q1 == null || q1 = ""){
-    alert('You missed question 1');
-    return false;
-  }
-}
-*/
-
-
-
-
-
-/*
-var questions = [
-  {
-    prompt: "What color are apples?\n(a) Red\n (b) Purple\n\ (c) Orange",
-    answer: "a"
-  },
-  {
-    prompt: "What color are bananas?\n(a) Teal\n\ (b) Magenta\n (c) Yellow",
-    answer: "c"
-  }
-]
-
-var score = 0;
-
-for(var i=0; i < questions.length; i++){
-  var response = window.prompt(questions[i].prompt);
-  if(response == questions[i].answer){
-    score++;
-    alert("Correct!");
+function playerResult() {
+  if (health <= 0) {
+    message = m4;
+    gooddeed.checked = false;
+    lunch.checked = false;
+    selfcare.checked = false;
+  } else if (gooddeed.checked) {
+    gooddeedAction();
+  } else if (lunch.checked) {
+    lunchAction();
+  } else if (selfcare.checked) {
+    selfcareAction();
   } else {
-    alert("Wrong!")
-  }
-}
-alert("you got" + score + "/" + questions.length);
 
-*/
+    message = m6;
+  }
+
+  distance = height - points;
+
+  writeResults();
+}
+
+
+function gooddeedAction() {
+if (points === 3000) {
+	message = m5;
+} else if (points <= 2900) {
+points += 100;
+ health -= 10;
+ message = m7;
+	minusPoints();
+  }
+  gooddeed.checked = false; /* keep */
+}
+
+function lunchAction() {
+if (money === 0) {
+	message = m9;
+} else if (health >= 100) {
+  message = m10;
+} else if (health <= 90) {
+	money -= 10;
+  health += 10;
+  message = m8;
+}
+lunch.checked = false; /* keep */
+}
+
+function selfcareAction() {
+if (health === 100) {
+	message = m10;
+} else if (health >= 70) {
+	message = m11;
+} else if (health <= 60) {
+	health += 10;
+  message = m8;
+}
+  selfcare.checked = false; /* keep */
+}
+
+
+function minusPoints() {
+let num = Math.floor(Math.random() * 100);
+if (num <= 5) {
+	points -= 100;
+  message = m3;
+}
+}
+
+function writeResults() {
+  document.querySelector("#points").textContent = points;
+  document.querySelector("#health").textContent = health;
+  document.querySelector("#money").textContent = money;
+  document.querySelector("#distance").textContent = distance;
+  document.querySelector("#narration").textContent = message;
+}
+gooddeed

@@ -14,6 +14,7 @@ html{
 
 body {
   margin: 0;
+  width: 100%;
 }
 
 header {
@@ -24,7 +25,7 @@ header {
     color: #fff;
 }
 
-h1 {
+h1, .mc {
   font-family: 'Nunito', sans-serif;
   font-size: 7em;
 }
@@ -67,7 +68,7 @@ h2 {
   background: #A9A9A9;
 }
 
-#quizarea, #maparea, #sources {
+#quizarea, #maparea, #sources, #gamearea {
   background: #DCDCDC;
 }
 
@@ -85,8 +86,6 @@ h2 {
 #factsarea, #actorsarea {
 background: #A9A9A9;
 }
-
-
 
 p, h2, .about {
   font-family: 'Poppins', sans-serif;
@@ -131,10 +130,34 @@ a:hover {
 }
 
 /*quiz css*/
+#after_submit {
+  visibility: hidden;
+}
 
+.mc {
+  display: inline;
+}
 
+#thequiz, #gamecontainer {
+  margin: 3rem;
+}
 
 /*media queries */
+@media screen and (max-width: 1030px) {
+
+  #mapid {
+    width: 80%;
+    margin: auto;
+  }
+
+  .about {
+    padding-left: 7rem;
+    padding-right: 7rem;
+  }
+
+
+}
+
 
 @media screen and (max-width: 700px) {
 

@@ -170,7 +170,7 @@ integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfW
     <img class="card-img-top" src="images/eleanor.png" alt="Photo of Eleanor Shellstrop from The Good Place.">
     <div class="card-body">
       <h5 class="card-title">The Good Place</h5>
-      <p class="card-text">The Good Place is an American television sitcom that has been on air with NBC since 2016. The show features Emmy-award-winning actor, Ted Danson.</p>
+      <p class="card-text">The Good Place is an American television sitcom that has been on air with NBC since 2016. The show features Emmy-award-winning actor Ted Danson.</p>
       <p>
         <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample5" aria-expanded="false" aria-controls="collapseExample3">
         Learn More
@@ -220,361 +220,37 @@ integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfW
 </section>
 </article>
 
-<!--new quiz-->
+<!-- attempted game thing -->
+<article id="gamearea">
+<div id="gamecontainer">
+  <h2>How fast can you get into The Good Place?</h2>
+<p id="narration"></p>
 
-<div id="quiz">
-  <div id="quiz-header">
-    <h1>jQuery Quiz Plugin</h1>
-    <p class="faded">A quiz about the plugin built by the plugin.</p>
-  </div>
-  <div id="quiz-start-screen">
-    <p><a href="#" id="quiz-start-btn" class="quiz-button">Start</a></p>
-  </div>
+<p>Choose one:</p>
+<ul>
+  <li>
+    <label for="gooddeed"><input type="radio" name="goodplace" id="gooddeed" value="gooddeed"> Do a good deed.</label>
+  </li>
+  <li>
+    <label for="lunch"><input type="radio" name="goodplace" id="lunch" value="lunch"> Buy a friend lunch.</label>
+  </li>
+  <li>
+    <label for="selfcare"><input type="radio" name="goodplace" id="selfcare" value="selfcare"> Self care.</label>
+  </li>
+</ul>
+<button id="go">Go!</button>
+
+<!-- text will be written into the spans -->
+<ul>
+  <li>Points: <span id="points"></span></li>
+  <li>Health: <span id="health"></span></li>
+  <li>Money: <span id="money"></span></li>
+  <li>Remaining: <span id="distance"></span> points</li>
+</ul>
+
 </div>
-
-<!--
-<section>
-  <div id="results"></div>
-  <form name="quizForm" onsubmit="return submitAnswers()">
-    <h3>1.What is Eleanor Shellstrop's catchphrase?</h3>
-    <input type="radio" name="q1" value="a" id="q1a">a. &lt;Ya Basic!&gt;<br>
-    <input type="radio" name="q1" value="b" id="q1b">b. &lt;eat my farts&gt;<br>
-    <input type="radio" name="q1" value="c" id="q1c">c. &lt;Pobody's nerfect&gt;<br>
-    <input type="radio" name="q1" value="d" id="q1d">d. &lt;idk&gt;<br>
-
-    <h3>2.What is Eleanor Shellstrop's catchphrase?</h3>
-    <input type="radio" name="q2" value="a" id="q2a">a. &lt;Ya Basic!&gt;<br>
-    <input type="radio" name="q2" value="b" id="q2b">b. &lt;eat my farts&gt;<br>
-    <input type="radio" name="q2" value="c" id="q2c">c. &lt;Pobody's nerfect&gt;<br>
-    <input type="radio" name="q2" value="d" id="q2d">d. &lt;idk&gt;<br>
-
-    <h3>3.What is Eleanor Shellstrop's catchphrase?</h3>
-    <input type="radio" name="q3" value="a" id="q3a">a. &lt;Ya Basic!&gt;<br>
-    <input type="radio" name="q3" value="b" id="q3b">b. &lt;eat my farts&gt;<br>
-    <input type="radio" name="q3" value="c" id="q3c">c. &lt;Pobody's nerfect&gt;<br>
-    <input type="radio" name="q3" value="d" id="q3d">d. &lt;idk&gt;<br>
-
-    <h3>4.What is Eleanor Shellstrop's catchphrase?</h3>
-    <input type="radio" name="q4" value="a" id="q4a">a. &lt;Ya Basic!&gt;<br>
-    <input type="radio" name="q4" value="b" id="q4b">b. &lt;eat my farts&gt;<br>
-    <input type="radio" name="q4" value="c" id="q4c">c. &lt;Pobody's nerfect&gt;<br>
-    <input type="radio" name="q4" value="d" id="q4d">d. &lt;idk&gt;<br>
-
-    <h3>5.What is Eleanor Shellstrop's catchphrase?</h3>
-    <input type="radio" name="q5" value="a" id="q5a">a. &lt;Ya Basic!&gt;<br>
-    <input type="radio" name="q5" value="b" id="q5b">b. &lt;eat my farts&gt;<br>
-    <input type="radio" name="q5" value="c" id="q5c">c. &lt;Pobody's nerfect&gt;<br>
-    <input type="radio" name="q5" value="d" id="q5d">d. &lt;idk&gt;<br>
-    <br><br>
-    <input type="submit" value="Submit Answers" <a href="#results">
-  </form>
-</section>
--->
-
-
-
-<!--end of new quiz-->
-
-<!--quiz-->
-<article id="quizarea">
-<section>
-  <h2>Which Mike Schur Show Do You Belong In?</h2>
-
-  <div class="container10"> <!--container 10-->
-
-
-    <div class="row">
-      <div class="col-sm-6">
-        <form>
-          <fieldset class="form-group">
-            <p>Answer these questions and we'll tell you which Mike Schur show you'd fit right into!</p>
-
-<!-- question 1 -->
-            <label class="d-block">1. Pick a breakfast:</label>
-
-            <div class="form-group form-check">
-              <label class="form-check-label">
-                <input class="form-check-input" type="radio" name="breakfast" value="waffles">I could go for some waffles!
-              </label>
-            </div>
-
-            <div class="form-group form-check">
-              <label class="form-check-label">
-                <input class="form-check-input" type="radio" name="breakfast" value="coffee">Just coffee, please.
-              </label>
-            </div>
-
-            <div class="form-group form-check">
-              <label class="form-check-label">
-                <input class="form-check-input" type="radio" name="breakfast" value="none">I don't eat breakfast.
-              </label>
-            </div>
-
-            <div class="form-group form-check">
-              <label class="form-check-label">
-                <input class="form-check-input" type="radio" name="breakfast" value="bacon">I love waking up to bacon in the morning!
-              </label>
-            </div>
-
-
-<!-- question 2 -->
-          <label class="d-block">2. Pick a hobby:</label>
-
-          <div class="form-group form-check">
-            <label class="form-check-label">
-              <input class="form-check-input" type="radio" name="hobby" value="magazines">Reading cheesy tabloids.
-            </label>
-          </div>
-
-          <div class="form-group form-check">
-            <label class="form-check-label">
-              <input class="form-check-input" type="radio" name="hobby" value="scrapbooking">Scrapbooking to save my favorite mems.
-            </label>
-          </div>
-
-          <div class="form-group form-check">
-            <label class="form-check-label">
-              <input class="form-check-input" type="radio" name="hobby" value="bar">Probably go to a bar with my friends.
-            </label>
-          </div>
-
-          <div class="form-group form-check">
-            <label class="form-check-label">
-              <input class="form-check-input" type="radio" name="hobby" value="movie">Stay home and watch an action movie.
-            </label>
-          </div>
-
-
-<!-- question 3 -->
-          <label class="d-block">3. What's your go-to catchphrase?</label>
-
-          <div class="form-group form-check">
-            <label class="form-check-label">
-              <input class="form-check-input" type="radio" name="catchphrase" value="basic">Ya basic!
-            </label>
-          </div>
-
-          <div class="form-group form-check">
-            <label class="form-check-label">
-              <input class="form-check-input" type="radio" name="catchphrase" value="cool">Cool cool cool.
-            </label>
-          </div>
-
-          <div class="form-group form-check">
-            <label class="form-check-label">
-              <input class="form-check-input" type="radio" name="catchphrase" value="shesaid">That's what she said!
-            </label>
-          </div>
-
-          <div class="form-group form-check">
-            <label class="form-check-label">
-              <input class="form-check-input" type="radio" name="catchphrase" value="foods">Why would anyone ever eat anything besides breakfast foods?
-            </label>
-          </div>
-
-
-<!-- question 4 -->
-          <label class="d-block">4. What do you look for in a significant other?</label>
-
-          <div class="form-group form-check">
-            <label class="form-check-label">
-              <input class="form-check-input" type="radio" name="significantother" value="smart">They have to be smarter than me.
-            </label>
-          </div>
-
-          <div class="form-group form-check">
-            <label class="form-check-label">
-              <input class="form-check-input" type="radio" name="significantother" value="funny"> They have to have a sense of humor!
-            </label>
-          </div>
-
-          <div class="form-group form-check">
-            <label class="form-check-label">
-                <input class="form-check-input" type="radio" name="significantother" value="flashy">No one too flashy.
-            </label>
-          </div>
-
-          <div class="form-group form-check">
-            <label class="form-check-label">
-              <input class="form-check-input" type="radio" name="significantother" value="hot">I don't care, as long as they're hot.
-            </label>
-          </div>
-
-
-<!-- question 5 -->
-          <label class="d-block">5. How would your friends describe your personality?</label>
-
-          <div class="form-group form-check">
-            <label class="form-check-label">
-              <input class="form-check-input" type="radio" name="personality" value="brave">Brave
-            </label>
-          </div>
-
-          <div class="form-group form-check">
-            <label class="form-check-label">
-              <input class="form-check-input" type="radio" name="personality" value="sarcastic">Sarcastic
-            </label>
-          </div>
-
-          <div class="form-group form-check">
-            <label class="form-check-label">
-                <input class="form-check-input" type="radio" name="personality" value="enthusiastic">Enthusiastic
-            </label>
-          </div>
-
-          <div class="form-group form-check">
-            <label class="form-check-label">
-              <input class="form-check-input" type="radio" name="personality" value="fish">Ethical
-            </label>
-          </div>
-
-
-<!-- question 6 -->
-          <label class="d-block">6. You turn on the TV. What are you watching?</label>
-
-          <div class="form-group form-check">
-            <label class="form-check-label">
-              <input class="form-check-input" type="radio" name="significantother" value="diehard">Die Hard
-            </label>
-          </div>
-
-          <div class="form-group form-check">
-            <label class="form-check-label">
-              <input class="form-check-input" type="radio" name="significantother" value="devil">Devil Wears Prada
-            </label>
-          </div>
-
-          <div class="form-group form-check">
-            <label class="form-check-label">
-                <input class="form-check-input" type="radio" name="significantother" value="news">The news on CNN
-            </label>
-          </div>
-
-          <div class="form-group form-check">
-            <label class="form-check-label">
-              <input class="form-check-input" type="radio" name="significantother" value="housewives">Real Housewives of Atlanta
-            </label>
-          </div>
-
-
-<!-- question 7 -->
-          <label class="d-block">7. What pet should you get next?</label>
-
-          <div class="form-group form-check">
-            <label class="form-check-label">
-              <input class="form-check-input" type="radio" name="pet" value="horse">A mini horse
-            </label>
-          </div>
-
-          <div class="form-group form-check">
-            <label class="form-check-label">
-              <input class="form-check-input" type="radio" name="pet" value="dog">Golden retriever
-            </label>
-          </div>
-
-          <div class="form-group form-check">
-            <label class="form-check-label">
-                <input class="form-check-input" type="radio" name="pet" value="owl">An owl
-            </label>
-          </div>
-
-          <div class="form-group form-check">
-            <label class="form-check-label">
-              <input class="form-check-input" type="radio" name="pet" value="cat">Several cats
-            </label>
-          </div>
-
-
-<!-- question 8 -->
-          <label class="d-block">8. What will be your Halloween costume next year?</label>
-
-          <div class="form-group form-check">
-            <label class="form-check-label">
-              <input class="form-check-input" type="radio" name="costume" value="gaga">Lady Gaga
-            </label>
-          </div>
-
-          <div class="form-group form-check">
-            <label class="form-check-label">
-              <input class="form-check-input" type="radio" name="costume" value="fbi">FBI Agent
-            </label>
-          </div>
-
-          <div class="form-group form-check">
-            <label class="form-check-label">
-                <input class="form-check-input" type="radio" name="costume" value="angel">An angel
-            </label>
-          </div>
-
-          <div class="form-group form-check">
-            <label class="form-check-label">
-              <input class="form-check-input" type="radio" name="costume" value="demon">A demon
-            </label>
-          </div>
-
-
-<!-- question 9 -->
-          <label class="d-block">9. Pick an insult:</label>
-
-          <div class="form-group form-check">
-            <label class="form-check-label">
-              <input class="form-check-input" type="radio" name="insult" value="shorts">"Eat my shorts, jabronies."
-            </label>
-          </div>
-
-          <div class="form-group form-check">
-            <label class="form-check-label">
-              <input class="form-check-input" type="radio" name="insult" value="goat">"Care to sit? I’m sure you’d like to take some weight off your cloven hooves."
-            </label>
-          </div>
-
-          <div class="form-group form-check">
-            <label class="form-check-label">
-                <input class="form-check-input" type="radio" name="insult" value="farts">"Do you have a second to eat my farts?"
-            </label>
-          </div>
-
-          <div class="form-group form-check">
-            <label class="form-check-label">
-              <input class="form-check-input" type="radio" name="compliment" value="face">"I hate looking at your face. I wanna smash it."
-            </label>
-          </div>
-
-
-<!-- question 10 -->
-          <label class="d-block">10. Pick a compliment:</label>
-
-          <div class="form-group form-check">
-            <label class="form-check-label">
-              <input class="form-check-input" type="radio" name="compliment" value="hugs">"Ugh, of course your hugs are amazing."
-            </label>
-          </div>
-
-          <div class="form-group form-check">
-            <label class="form-check-label">
-              <input class="form-check-input" type="radio" name="compliment" value="proud">"I'm really proud of you."
-            </label>
-          </div>
-
-          <div class="form-group form-check">
-            <label class="form-check-label">
-                <input class="form-check-input" type="radio" name="compliment" value="work">"Nice work."
-            </label>
-          </div>
-
-          <div class="form-group form-check">
-            <label class="form-check-label">
-              <input class="form-check-input" type="radio" name="compliment" value="fish">"You beautiful, tropical sunfish."
-            </label>
-          </div>
-
-          </fieldset>
-        </form>
-      </div>
-    </div>
-   </div> <!-- end of container 10-->
-</section>
 </article>
+
 
 <!--fave actors-->
 <article id="actorsarea">
